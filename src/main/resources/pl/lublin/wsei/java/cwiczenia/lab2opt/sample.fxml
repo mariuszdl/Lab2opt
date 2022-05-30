@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.lublin.wsei.java.cwiczenia.lab2opt.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.cwiczenia.lab2opt.Controller">
+   <children>
+      <LineChart layoutX="244.0" layoutY="38.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis autoRanging="false" side="LEFT" upperBound="200.0" />
+        </yAxis>
+      </LineChart>
+      <Slider fx:id="aplitudeSlider" layoutX="52.0" layoutY="73.0" prefHeight="14.0" prefWidth="174.0" />
+      <Slider fx:id="frequencySlider" layoutX="52.0" layoutY="139.0" prefHeight="14.0" prefWidth="174.0" />
+      <Slider fx:id="phaseSlider" layoutX="52.0" layoutY="205.0" prefHeight="14.0" prefWidth="174.0" />
+      <Slider fx:id="offsetSlider" layoutX="52.0" layoutY="278.0" prefHeight="14.0" prefWidth="174.0" />
+      <Text layoutX="52.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aplitude">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequency">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phase">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Offset">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="108.0" layoutY="335.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
