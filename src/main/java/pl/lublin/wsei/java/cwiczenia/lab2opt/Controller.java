@@ -30,6 +30,9 @@ public class Controller {
     }
 
     private void regenSin() {
-
+        series.getData().clear();
+        for (int i = 0; i < 200; i++) {
+            series.getData().add(new XYChart.Data(i + "", offsetSlider.getValue() + aplitudeSlider.getValue() * Math.sin(i/200.0 * Math.PI * 2 * frequencySlider.getValue() + phaseSlider.getValue())));
+        }
     }
 }
