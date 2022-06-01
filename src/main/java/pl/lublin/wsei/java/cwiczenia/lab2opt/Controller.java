@@ -19,6 +19,8 @@ public class Controller {
         series = new XYChart.Series<>();
         series.setName("sin");
         lineChart.getData().add(series);
+        lineChart.setAnimated(false);
+        lineChart.setCreateSymbols(false);
         regenSin();
     }
 
